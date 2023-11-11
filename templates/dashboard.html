@@ -131,9 +131,9 @@
 <main class="container py-5">
 
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <a href="" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
           <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-          <span class="fs-4">About</span>
+          <span class="fs-4">About <mark>{{ username }}<mark></span>
         </a>
   
         <ul class="nav nav-pills">
@@ -170,10 +170,11 @@
     </div>
     <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 66.6667%; top: 0px;">
       <div class="card">
-        <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+        <img class="bd-placeholder-img card-img-top" width="100%" height="200" src="/static/photo.jpeg" alt="Placeholder: Image cap" role="img" aria-label="Placeholder: Image cap">
+
         <div class="card-body">
           <h5 class="card-title">Тварини:</h5>
-          <p class="card-text">Також у мене є свій молодший друг - собака</p>
+          <p class="card-text">Також у мене є свій молодший друг - собака. Чого зображення таке "шакальне"(розтянуте)? Бо так цікавіше, не банально.</p>
         </div>
       </div>
     </div>
@@ -197,18 +198,23 @@
       <div class="card text-center">
         <div class="card-body">
           <h5 class="card-title">Сайт</h5>
-          <p class="card-text">Це всього лише учбовий сайт. Основний у стадії розробки</p>
+          <p class="card-text">Це всього лише учбовий сайт. Основний у стадії розробки. Хочете подивитись на нього? Тоді вам треба мати ссилку на <a href="https://github.com/MatveyPrisaznuk/Wiki.war">GitHub</a> файл від автора (мене)! Якщо ви бачите, що проект пустує, тоді знайте, що я його ще не завантажив.</a></p>
+
         </div>
       </div>
     </div>
-    <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 362px;">
+    <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 0px;">
       <div class="card">
-        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
+        <img class="bd-placeholder-img card-img-top" width="100%" height="200" src="/static/game.jpeg" alt="Placeholder: Image cap" role="img" aria-label="Placeholder: Image cap">
+        <div class="card-body">
+          <h5 class="card-title">Улюбленні ігри:</h5>
+          <p class="card-text">Ціла серія ігор Metro(3 штуки) від української компанії 4A Games.</p>
+        </div>
       </div>
     </div>
     
     <hr class="my-5">
-    <button type="button" class="w-100 btn btn-lg btn-primary" onclick="window.location.href='{{ url_for('page') }}'">Повернутись назад</button>
+    <button type="button" class="w-100 btn btn-lg btn-primary" onclick="window.location.href='{{ url_for('page') }}'">Повернутись на самий початок</button>
   </div>
 </main>
 <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

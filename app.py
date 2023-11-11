@@ -13,9 +13,7 @@ app.config['SECRET_KEY'] = 'thisisasecretkey'
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 
-@app.route('/about')
-def about():
-    return render_template('about.html')
+
 
 
 @app.route('/')
@@ -84,8 +82,9 @@ def login():
 @app.route('/dashboard', methods=['GET', 'POST'])
 @login_required
 def dashboard():
+    username = current_user.username if current_user.is_authenticated else None
     things = ["Мені", "подобається", "IT"]
-    return render_template('dashboard.html', things = things)
+    return render_template('dashboard.html', things = things, username=username)
 
 
 @app.route('/logout', methods=['GET', 'POST'])
