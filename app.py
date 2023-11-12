@@ -83,7 +83,7 @@ def login():
 @login_required
 def dashboard():
     username = current_user.username if current_user.is_authenticated else None
-    things = ["Мені", "подобається", "IT"]
+    things = ["Малювання", "створювання ігор", "- Це всі мої хоббі"]
     return render_template('dashboard.html', things = things, username=username)
 
 
